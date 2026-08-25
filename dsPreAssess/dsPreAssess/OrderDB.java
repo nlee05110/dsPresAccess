@@ -14,21 +14,16 @@ public class OrderDB implements OrderDBInterface {
 		String file = "orders.txt";
 		
 		try(BufferedReader reader = new BufferedReader(new FileReader(file))){
-			String line;
 			
+			String line;
 			int count = 0;
 			
 			while(((line = reader.readLine()) != null) && count <= 10) {
 				
 				arr[count] = String.valueOf(line); //Loads each line in file into the 'arr' array
-				
 				count++;
 				
 			}
-			
-			
-			
-			
 			
 		}
 		catch(FileNotFoundException e) {

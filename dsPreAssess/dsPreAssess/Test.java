@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class Test {
 
-	public static void main(String[] args) { //this is my first attempt of loading the file
+	public static void main(String[] args) { //this was my first attempt of loading the file, but it does not load file contents into an array
 		String fileName = "orders.txt";
 		try(BufferedReader reader = new BufferedReader(new FileReader(fileName))){
 			String line = "";
@@ -29,13 +29,10 @@ public class Test {
 					System.out.printf("+%s\t\s%-23s\t%12.2f%n", arr[0], arr[2], amount);
 				
 				}
-				count++;
 				
+				count++;	
 				
 			}
-			
-			
-			
 			
 		}
 		catch(FileNotFoundException e) {
